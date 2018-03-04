@@ -61,8 +61,7 @@
     <servlet-name>ServletContextDemo2</servlet-name>
     <url-pattern>/ServletContextDemo2</url-pattern>
   </servlet-mapping>
-  
-    <servlet>
+  <servlet>
     <servlet-name>DrawImage</servlet-name>
     <servlet-class>com.wistron.DrawImage</servlet-class>
   </servlet>
@@ -70,8 +69,7 @@
     <servlet-name>DrawImage</servlet-name>
     <url-pattern>/DrawImage</url-pattern>
   </servlet-mapping>
-  
-   <servlet>
+  <servlet>
     <servlet-name>CheckServlet</servlet-name>
     <servlet-class>com.wistron.CheckServlet</servlet-class>
   </servlet>
@@ -79,8 +77,91 @@
     <servlet-name>CheckServlet</servlet-name>
     <url-pattern>/CheckServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>RequestDemo01</servlet-name>
+    <servlet-class>com.wistron.RequestDemo01</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RequestDemo01</servlet-name>
+    <url-pattern>/RequestDemo01</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>RequestDemo02</servlet-name>
+    <servlet-class>com.wistron.RequestDemo02</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RequestDemo02</servlet-name>
+    <url-pattern>/RequestDemo02</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>RequestDemo03</servlet-name>
+    <servlet-class>com.wistron.RequestDemo03</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RequestDemo03</servlet-name>
+    <url-pattern>/RequestDemo03</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>RequestDemo04</servlet-name>
+    <servlet-class>com.wistron.RequestDemo04</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RequestDemo04</servlet-name>
+    <url-pattern>/RequestDemo04</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>RequestDemo6</servlet-name>
+    <servlet-class>com.wistron.RequestDemo6</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RequestDemo6</servlet-name>
+    <url-pattern>/RequestDemo6</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>CookieDemo01</servlet-name>
+    <servlet-class>com.wistron.CookieDemo01</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CookieDemo01</servlet-name>
+    <url-pattern>/CookieDemo01</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>SessionDemo1</servlet-name>
+    <servlet-class>com.wistron.SessionDemo1</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SessionDemo1</servlet-name>
+    <url-pattern>/SessionDemo1</url-pattern>
+  </servlet-mapping>
   
   
+  
+    <servlet>
+    <servlet-name>IndexServlet</servlet-name>
+    <servlet-class>com.wistron.IndexServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>IndexServlet</servlet-name>
+    <url-pattern>/IndexServlet</url-pattern>
+  </servlet-mapping>
+  
+      <servlet>
+    <servlet-name>BuyServlet</servlet-name>
+    <servlet-class>com.wistron.BuyServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BuyServlet</servlet-name>
+    <url-pattern>/BuyServlet</url-pattern>
+  </servlet-mapping>
+  
+       <servlet>
+    <servlet-name>ListCartServlet</servlet-name>
+    <servlet-class>com.wistron.ListCartServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ListCartServlet</servlet-name>
+    <url-pattern>/ListCartServlet</url-pattern>
+  </servlet-mapping> 
   
   
 </web-app>
