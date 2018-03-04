@@ -9,23 +9,82 @@
   <name>04_hellomaven Maven Webapp</name>
   <url>http://maven.apache.org</url>
   <dependencies>
-      <dependency>  
-   <groupId>javax.servlet</groupId>  
-   <artifactId>javax.servlet-api</artifactId>  
-   <version>4.0.0</version>  
-   <scope>provided</scope>  
-  </dependency>  
-  <dependency>
+  
+   <dependency>
   	<groupId>junit</groupId>
   	<artifactId>junit</artifactId>
   	<version>4.12</version>
   </dependency>
-  <dependency>
-  	<groupId>javax.servlet.jsp</groupId>
-  	<artifactId>jsp-api</artifactId>
-  	<version>2.2</version>
-  	<scope>provided</scope> 
-  </dependency>
+  
+ 
+ <!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-context</artifactId>
+    <version>5.0.4.RELEASE</version>
+</dependency>
+ <!-- https://mvnrepository.com/artifact/org.springframework/spring-aop -->
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-aop</artifactId>
+    <version>5.0.4.RELEASE</version>
+</dependency>
+ <!-- https://mvnrepository.com/artifact/aopalliance/aopalliance -->
+<dependency>
+    <groupId>aopalliance</groupId>
+    <artifactId>aopalliance</artifactId>
+    <version>1.0</version>
+</dependency>
+ <!-- https://mvnrepository.com/artifact/org.springframework/spring-beans -->
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-beans</artifactId>
+    <version>5.0.4.RELEASE</version>
+</dependency>
+ <!-- https://mvnrepository.com/artifact/org.springframework/spring-core -->
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-core</artifactId>
+    <version>5.0.4.RELEASE</version>
+</dependency>
+ <!-- https://mvnrepository.com/artifact/commons-logging/commons-logging -->
+<dependency>
+    <groupId>commons-logging</groupId>
+    <artifactId>commons-logging</artifactId>
+    <version>1.2</version>
+</dependency>
+ <!-- https://mvnrepository.com/artifact/org.springframework/spring-expression -->
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-expression</artifactId>
+    <version>5.0.4.RELEASE</version>
+</dependency>
+ <!-- https://mvnrepository.com/artifact/javax/javaee-api -->
+<dependency>
+    <groupId>javax</groupId>
+    <artifactId>javaee-api</artifactId>
+    <version>8.0</version>
+    <scope>provided</scope>
+</dependency>
+ <!-- https://mvnrepository.com/artifact/javax.servlet.jsp.jstl/jstl -->
+<dependency>
+    <groupId>javax.servlet.jsp.jstl</groupId>
+    <artifactId>jstl</artifactId>
+    <version>1.2</version>
+</dependency>
+ <!-- https://mvnrepository.com/artifact/javax.servlet.jsp/javax.servlet.jsp-api -->
+<dependency>
+    <groupId>javax.servlet.jsp</groupId>
+    <artifactId>javax.servlet.jsp-api</artifactId>
+    <version>2.3.2-b02</version>
+    <scope>provided</scope>
+</dependency>
+ 
+ 
+ 
+  
+  
+
  
   </dependencies>
   <build>

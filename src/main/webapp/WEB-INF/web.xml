@@ -17,9 +17,6 @@
     <servlet-name>HelloMaven</servlet-name>
     <url-pattern>/hellomaven</url-pattern>
   </servlet-mapping>
-
-  
-  
   <servlet>
     <servlet-name>ServletDemo01</servlet-name>
     <servlet-class>com.wistron.ServletDemo01</servlet-class>
@@ -28,34 +25,27 @@
     <servlet-name>ServletDemo01</servlet-name>
     <url-pattern>/ServletDemo01</url-pattern>
   </servlet-mapping>
-
-
-
-  
   <servlet>
     <servlet-name>ServletConfigDemo1</servlet-name>
     <servlet-class>com.wistron.ServletConfigDemo1</servlet-class>
-    <!--配置ServletConfigDemo1的初始化参数 -->
     <init-param>
-        <param-name>name</param-name>
-        <param-value>gacl</param-value>
-    </init-param>
-     <init-param>
-        <param-name>password</param-name>
-        <param-value>123</param-value>
+      <param-name>name</param-name>
+      <param-value>gacl</param-value>
     </init-param>
     <init-param>
-        <param-name>charset</param-name>
-        <param-value>UTF-8</param-value>
+      <param-name>password</param-name>
+      <param-value>123</param-value>
     </init-param>
-   </servlet>
-  
-<servlet-mapping>
+    <init-param>
+      <param-name>charset</param-name>
+      <param-value>UTF-8</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
     <servlet-name>ServletConfigDemo1</servlet-name>
     <url-pattern>/ServletConfigDemo1</url-pattern>
-  </servlet-mapping>   
-  
-    <servlet>
+  </servlet-mapping>
+  <servlet>
     <servlet-name>ServletContextDemo1</servlet-name>
     <servlet-class>com.wistron.ServletContextDemo1</servlet-class>
   </servlet>
@@ -63,9 +53,6 @@
     <servlet-name>ServletContextDemo1</servlet-name>
     <url-pattern>/ServletContextDemo1</url-pattern>
   </servlet-mapping>
-  
-  
-  
   <servlet>
     <servlet-name>ServletContextDemo2</servlet-name>
     <servlet-class>com.wistron.ServletContextDemo2</servlet-class>
@@ -75,7 +62,13 @@
     <url-pattern>/ServletContextDemo2</url-pattern>
   </servlet-mapping>
   
-  
-  
+    <servlet>
+    <servlet-name>DrawImage</servlet-name>
+    <servlet-class>com.wistron.DrawImage</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DrawImage</servlet-name>
+    <url-pattern>/DrawImage</url-pattern>
+  </servlet-mapping>
   
 </web-app>
