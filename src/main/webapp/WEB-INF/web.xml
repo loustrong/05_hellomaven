@@ -17,8 +17,7 @@
     <servlet-name>HelloMaven</servlet-name>
     <url-pattern>/hellomaven</url-pattern>
   </servlet-mapping>
-  
-    <servlet>
+  <servlet>
     <servlet-name>HelloIndex</servlet-name>
     <servlet-class>com.wistron.HelloIndex</servlet-class>
   </servlet>
@@ -26,5 +25,21 @@
     <servlet-name>HelloIndex</servlet-name>
     <url-pattern>/</url-pattern>
   </servlet-mapping>
+  
+  
+  <servlet>
+    <servlet-name>ServletDemo01</servlet-name>
+    <servlet-class>com.wistron.ServletDemo01</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ServletDemo01</servlet-name>
+    <url-pattern>/ServletDemo01</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+  
+  
   
 </web-app>
