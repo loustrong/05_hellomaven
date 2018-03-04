@@ -71,4 +71,16 @@
     <url-pattern>/DrawImage</url-pattern>
   </servlet-mapping>
   
+   <servlet>
+    <servlet-name>CheckServlet</servlet-name>
+    <servlet-class>com.wistron.CheckServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CheckServlet</servlet-name>
+    <url-pattern>/CheckServlet</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
 </web-app>
