@@ -1,5 +1,6 @@
 com\wistron\DB.class
 com\wistron\RequestDemo6.class
+com\wistron\FormServlet.class
 com\wistron\RequestDemo04.class
 com\wistron\CheckServlet.class
 com\wistron\HelloMaven.class
@@ -11,9 +12,11 @@ com\wistron\ServletContextDemo1.class
 com\wistron\ListCartServlet.class
 com\wistron\IndexServlet.class
 com\wistron\HelloIndex.class
+com\wistron\DoFormServlet.class
 com\wistron\RequestDemo03.class
 com\wistron\RequestDemo01.class
 com\wistron\RequestDemo02.class
+com\wistron\TokenProccessor.class
 com\wistron\CookieDemo01.class
 com\wistron\SessionDemo1.class
 com\wistron\ServletContextDemo2.class

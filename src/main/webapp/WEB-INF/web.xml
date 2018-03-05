@@ -133,10 +133,7 @@
     <servlet-name>SessionDemo1</servlet-name>
     <url-pattern>/SessionDemo1</url-pattern>
   </servlet-mapping>
-  
-  
-  
-    <servlet>
+  <servlet>
     <servlet-name>IndexServlet</servlet-name>
     <servlet-class>com.wistron.IndexServlet</servlet-class>
   </servlet>
@@ -144,8 +141,7 @@
     <servlet-name>IndexServlet</servlet-name>
     <url-pattern>/IndexServlet</url-pattern>
   </servlet-mapping>
-  
-      <servlet>
+  <servlet>
     <servlet-name>BuyServlet</servlet-name>
     <servlet-class>com.wistron.BuyServlet</servlet-class>
   </servlet>
@@ -153,15 +149,37 @@
     <servlet-name>BuyServlet</servlet-name>
     <url-pattern>/BuyServlet</url-pattern>
   </servlet-mapping>
-  
-       <servlet>
+  <servlet>
     <servlet-name>ListCartServlet</servlet-name>
     <servlet-class>com.wistron.ListCartServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>ListCartServlet</servlet-name>
     <url-pattern>/ListCartServlet</url-pattern>
-  </servlet-mapping> 
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>DoFormServlet</servlet-name>
+    <servlet-class>com.wistron.DoFormServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DoFormServlet</servlet-name>
+    <url-pattern>/DoFormServlet</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  <servlet>
+    <servlet-name>FormServlet</servlet-name>
+    <servlet-class>com.wistron.FormServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FormServlet</servlet-name>
+    <url-pattern>/FormServlet</url-pattern>
+  </servlet-mapping>
+  
+  
+  
   
   
 </web-app>

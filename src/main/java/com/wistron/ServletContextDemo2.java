@@ -13,7 +13,7 @@ public class ServletContextDemo2 extends HttpServlet {
 	 public void doGet(HttpServletRequest request, HttpServletResponse response)
 	            throws ServletException, IOException {
 	        ServletContext context = this.getServletContext();
-	        String data = (String) context.getAttribute("data");//从ServletContext对象中取出数据
+	        String data = (String) context.getAttribute("data");
 	        response.getWriter().print("data="+data);
 	    }
 
