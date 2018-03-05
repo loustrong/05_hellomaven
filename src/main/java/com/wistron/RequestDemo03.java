@@ -17,31 +17,31 @@ public class RequestDemo03 extends HttpServlet {
     
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		//¿Í»§¶ËÊÇÒÔUTF-8±àÂëÌá½»±íµ¥Êı¾İµÄ£¬ËùÒÔĞèÒªÉèÖÃ·şÎñÆ÷¶ËÒÔUTF-8µÄ±àÂë½øĞĞ½ÓÊÕ£¬·ñÔò¶ÔÓÚÖĞÎÄÊı¾İ¾Í»á²úÉúÂÒÂë
+		
         request.setCharacterEncoding("UTF-8");
         /**
-         * ±à&nbsp;&nbsp;ºÅ(ÎÄ±¾¿ò)£º
+         *
            <input type="text" name="userid" value="NO." size="2" maxlength="2">
          */
-        String userid = request.getParameter("userid");//»ñÈ¡ÌîĞ´µÄ±àºÅ£¬useridÊÇÎÄ±¾¿òµÄÃû×Ö£¬<input type="text" name="userid">
+        String userid = request.getParameter("userid");//<input type="text" name="userid">
         /**
-         * ÓÃ»§Ãû(ÎÄ±¾¿ò)£º<input type="text" name="username" value="ÇëÊäÈëÓÃ»§Ãû">
+         * <input type="text" name="username" value="">
          */
-        String username = request.getParameter("username");//»ñÈ¡ÌîĞ´µÄÓÃ»§Ãû
+        String username = request.getParameter("username");//ï¿½ï¿½È¡ï¿½ï¿½Ğ´ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½
         /**
-         * ÃÜ&nbsp;&nbsp;Âë(ÃÜÂë¿ò)£º<input type="password" name="userpass" value="ÇëÊäÈëÃÜÂë">
+         * <input type="password" name="userpass" value="">
          */
-        String userpass = request.getParameter("userpass");//»ñÈ¡ÌîĞ´µÄÃÜÂë
-        String sex = request.getParameter("sex");//»ñÈ¡Ñ¡ÖĞµÄĞÔ±ğ
-        String dept = request.getParameter("dept");//»ñÈ¡Ñ¡ÖĞµÄ²¿ÃÅ
-        //»ñÈ¡Ñ¡ÖĞµÄĞËÈ¤£¬ÒòÎª¿ÉÒÔÑ¡ÖĞ¶à¸öÖµ£¬ËùÒÔ»ñÈ¡µ½µÄÖµÊÇÒ»¸ö×Ö·û´®Êı×é£¬Òò´ËĞèÒªÊ¹ÓÃgetParameterValues·½·¨À´»ñÈ¡
+        String userpass = request.getParameter("userpass");//
+        String sex = request.getParameter("sex");//
+        String dept = request.getParameter("dept");//
+        //
         String[] insts = request.getParameterValues("inst");
-        String note = request.getParameter("note");//»ñÈ¡ÌîĞ´µÄËµÃ÷ĞÅÏ¢
-        String hiddenField = request.getParameter("hiddenField");//»ñÈ¡Òş²ØÓòµÄÄÚÈİ
+        String note = request.getParameter("note");//
+        String hiddenField = request.getParameter("hiddenField");//
         
         String instStr="";
         /**
-         * »ñÈ¡Êı×éÊı¾İµÄ¼¼ÇÉ£¬¿ÉÒÔ±ÜÃâinstsÊı×éÎªnullÊ±Òı·¢µÄ¿ÕÖ¸ÕëÒì³£´íÎó£¡
+         * 
          */
         for (int i = 0; insts!=null && i < insts.length; i++) {
             if (i == insts.length-1) {
@@ -52,22 +52,22 @@ public class RequestDemo03 extends HttpServlet {
         }
         
         String htmlStr = "<table>" +
-                            "<tr><td>ÌîĞ´µÄ±àºÅ£º</td><td>{0}</td></tr>" +
-                            "<tr><td>ÌîĞ´µÄÓÃ»§Ãû£º</td><td>{1}</td></tr>" +
-                            "<tr><td>ÌîĞ´µÄÃÜÂë£º</td><td>{2}</td></tr>" +
-                            "<tr><td>Ñ¡ÖĞµÄĞÔ±ğ£º</td><td>{3}</td></tr>" +
-                            "<tr><td>Ñ¡ÖĞµÄ²¿ÃÅ£º</td><td>{4}</td></tr>" +
-                            "<tr><td>Ñ¡ÖĞµÄĞËÈ¤£º</td><td>{5}</td></tr>" +
-                            "<tr><td>ÌîĞ´µÄËµÃ÷£º</td><td>{6}</td></tr>" +
-                            "<tr><td>Òş²ØÓòµÄÄÚÈİ£º</td><td>{7}</td></tr>" +
+                            "<tr><td>ï¿½ï¿½Ğ´ï¿½Ä±ï¿½Å£ï¿½</td><td>{0}</td></tr>" +
+                            "<tr><td>ï¿½ï¿½Ğ´ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½</td><td>{1}</td></tr>" +
+                            "<tr><td>ï¿½ï¿½Ğ´ï¿½ï¿½ï¿½ï¿½ï¿½ë£º</td><td>{2}</td></tr>" +
+                            "<tr><td>Ñ¡ï¿½Ğµï¿½ï¿½Ô±ï¿½</td><td>{3}</td></tr>" +
+                            "<tr><td>Ñ¡ï¿½ĞµÄ²ï¿½ï¿½Å£ï¿½</td><td>{4}</td></tr>" +
+                            "<tr><td>Ñ¡ï¿½Ğµï¿½ï¿½ï¿½È¤ï¿½ï¿½</td><td>{5}</td></tr>" +
+                            "<tr><td>ï¿½ï¿½Ğ´ï¿½ï¿½Ëµï¿½ï¿½ï¿½ï¿½</td><td>{6}</td></tr>" +
+                            "<tr><td>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½İ£ï¿½</td><td>{7}</td></tr>" +
                         "</table>";
         htmlStr = MessageFormat.format(htmlStr, userid,username,userpass,sex,dept,instStr,note,hiddenField);
         
-        response.setCharacterEncoding("UTF-8");//ÉèÖÃ·şÎñÆ÷¶ËÒÔUTF-8±àÂëÊä³öÊı¾İµ½¿Í»§¶Ë
-        response.setContentType("text/html;charset=UTF-8");//ÉèÖÃ¿Í»§¶Ëä¯ÀÀÆ÷ÒÔUTF-8±àÂë½âÎöÊı¾İ
-        response.getWriter().write(htmlStr);//Êä³öhtmlStrÀïÃæµÄÄÚÈİµ½¿Í»§¶Ëä¯ÀÀÆ÷ÏÔÊ¾
+        response.setCharacterEncoding("UTF-8");//ï¿½ï¿½ï¿½Ã·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½UTF-8ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½İµï¿½ï¿½Í»ï¿½ï¿½ï¿½
+        response.setContentType("text/html;charset=UTF-8");//ï¿½ï¿½ï¿½Ã¿Í»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½UTF-8ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+        response.getWriter().write(htmlStr);//ï¿½ï¿½ï¿½htmlStrï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½İµï¿½ï¿½Í»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾
         
-      //request¶ÔÏó·â×°µÄ²ÎÊıÊÇÒÔMapµÄĞÎÊ½´æ´¢µÄ
+      //requestï¿½ï¿½ï¿½ï¿½ï¿½×°ï¿½Ä²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Mapï¿½ï¿½ï¿½ï¿½Ê½ï¿½æ´¢ï¿½ï¿½
         Map<String, String[]> paramMap = request.getParameterMap();
         for(Map.Entry<String, String[]> entry :paramMap.entrySet()){
             String paramName = entry.getKey();

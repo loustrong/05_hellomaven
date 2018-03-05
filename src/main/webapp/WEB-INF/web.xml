@@ -157,7 +157,6 @@
     <servlet-name>ListCartServlet</servlet-name>
     <url-pattern>/ListCartServlet</url-pattern>
   </servlet-mapping>
-  
   <servlet>
     <servlet-name>DoFormServlet</servlet-name>
     <servlet-class>com.wistron.DoFormServlet</servlet-class>
@@ -166,9 +165,6 @@
     <servlet-name>DoFormServlet</servlet-name>
     <url-pattern>/DoFormServlet</url-pattern>
   </servlet-mapping>
-  
-  
-  
   <servlet>
     <servlet-name>FormServlet</servlet-name>
     <servlet-class>com.wistron.FormServlet</servlet-class>
@@ -177,6 +173,73 @@
     <servlet-name>FormServlet</servlet-name>
     <url-pattern>/FormServlet</url-pattern>
   </servlet-mapping>
+  
+  
+  
+  <servlet>
+    <servlet-name>LoginUIServlet</servlet-name>
+    <servlet-class>com.wistron.web.UI.LoginUIServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>RegisterUIServlet</servlet-name>
+    <servlet-class>com.wistron.web.UI.RegisterUIServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>RegisterServlet</servlet-name>
+    <servlet-class>com.wistron.web.controller.RegisterServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>com.wistron.web.controller.LoginServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>LogoutServlet</servlet-name>
+    <servlet-class>com.wistron.web.controller.LogoutServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginUIServlet</servlet-name>
+    <url-pattern>/servlet/LoginUIServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>RegisterUIServlet</servlet-name>
+    <url-pattern>/servlet/RegisterUIServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>RegisterServlet</servlet-name>
+    <url-pattern>/servlet/RegisterServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/servlet/LoginServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LogoutServlet</servlet-name>
+    <url-pattern>/servlet/LogoutServlet</url-pattern>
+  </servlet-mapping>
+  <filter>
+    <filter-name>EncodingFilter</filter-name>
+    <filter-class>com.wistron.web.filter.CharacterEncodingFilter</filter-class>
+    <init-param>
+      <param-name>encoding</param-name>
+      <param-value>UTF-8</param-value>
+    </init-param>
+  </filter>
+  <filter-mapping>
+    <filter-name>EncodingFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
   
   

@@ -17,46 +17,47 @@ public class RequestDemo01 extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		/**
-         * 1.»ñµÃ¿Í»§»úÐÅÏ¢
+         *
          */
-        String requestUrl = request.getRequestURL().toString();//µÃµ½ÇëÇóµÄURLµØÖ·
-        String requestUri = request.getRequestURI();//µÃµ½ÇëÇóµÄ×ÊÔ´
-        String queryString = request.getQueryString();//µÃµ½ÇëÇóµÄURLµØÖ·ÖÐ¸½´øµÄ²ÎÊý
-        String remoteAddr = request.getRemoteAddr();//µÃµ½À´·ÃÕßµÄIPµØÖ·
+        
+		String requestUrl = request.getRequestURL().toString();
+		String requestUri = request.getRequestURI();
+        String queryString = request.getQueryString();//
+        String remoteAddr = request.getRemoteAddr();//Ö·
         String remoteHost = request.getRemoteHost();
         int remotePort = request.getRemotePort();
         String remoteUser = request.getRemoteUser();
-        String method = request.getMethod();//µÃµ½ÇëÇóURLµØÖ·Ê±Ê¹ÓÃµÄ·½·¨
+        String method = request.getMethod();//
         String pathInfo = request.getPathInfo();
-        String localAddr = request.getLocalAddr();//»ñÈ¡WEB·þÎñÆ÷µÄIPµØÖ·
-        String localName = request.getLocalName();//»ñÈ¡WEB·þÎñÆ÷µÄÖ÷»úÃû
-        response.setCharacterEncoding("UTF-8");//ÉèÖÃ½«×Ö·ûÒÔ"UTF-8"±àÂëÊä³öµ½¿Í»§¶Ëä¯ÀÀÆ÷
-        //Í¨¹ýÉèÖÃÏìÓ¦Í·¿ØÖÆä¯ÀÀÆ÷ÒÔUTF-8µÄ±àÂëÏÔÊ¾Êý¾Ý£¬Èç¹û²»¼ÓÕâ¾ä»°£¬ÄÇÃ´ä¯ÀÀÆ÷ÏÔÊ¾µÄ½«ÊÇÂÒÂë
+        String localAddr = request.getLocalAddr();//Ö·
+        String localName = request.getLocalName();//
+        response.setCharacterEncoding("UTF-8");//
+        //Í¨
         response.setHeader("content-type", "text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
-        out.write("»ñÈ¡µ½µÄ¿Í»§»úÐÅÏ¢ÈçÏÂ£º");
+        out.write("ï¿½ï¿½È¡ï¿½ï¿½ï¿½Ä¿Í»ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½ï¿½Â£ï¿½");
         out.write("<hr/>");
-        out.write("ÇëÇóµÄURLµØÖ·£º"+requestUrl);
+        out.write("ï¿½ï¿½ï¿½ï¿½ï¿½URLï¿½ï¿½Ö·ï¿½ï¿½"+requestUrl);
         out.write("<br/>");
-        out.write("ÇëÇóµÄ×ÊÔ´£º"+requestUri);
+        out.write("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô´ï¿½ï¿½"+requestUri);
         out.write("<br/>");
-        out.write("ÇëÇóµÄURLµØÖ·ÖÐ¸½´øµÄ²ÎÊý£º"+queryString);
+        out.write("ï¿½ï¿½ï¿½ï¿½ï¿½URLï¿½ï¿½Ö·ï¿½Ð¸ï¿½ï¿½ï¿½ï¿½Ä²ï¿½ï¿½ï¿½ï¿½ï¿½"+queryString);
         out.write("<br/>");
-        out.write("À´·ÃÕßµÄIPµØÖ·£º"+remoteAddr);
+        out.write("ï¿½ï¿½ï¿½ï¿½ï¿½ßµï¿½IPï¿½ï¿½Ö·ï¿½ï¿½"+remoteAddr);
         out.write("<br/>");
-        out.write("À´·ÃÕßµÄÖ÷»úÃû£º"+remoteHost);
+        out.write("ï¿½ï¿½ï¿½ï¿½ï¿½ßµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½"+remoteHost);
         out.write("<br/>");
-        out.write("Ê¹ÓÃµÄ¶Ë¿ÚºÅ£º"+remotePort);
+        out.write("Ê¹ï¿½ÃµÄ¶Ë¿ÚºÅ£ï¿½"+remotePort);
         out.write("<br/>");
-        out.write("remoteUser£º"+remoteUser);
+        out.write("remoteUserï¿½ï¿½"+remoteUser);
         out.write("<br/>");
-        out.write("ÇëÇóÊ¹ÓÃµÄ·½·¨£º"+method);
+        out.write("ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ÃµÄ·ï¿½ï¿½ï¿½ï¿½ï¿½"+method);
         out.write("<br/>");
-        out.write("pathInfo£º"+pathInfo);
+        out.write("pathInfoï¿½ï¿½"+pathInfo);
         out.write("<br/>");
-        out.write("localAddr£º"+localAddr);
+        out.write("localAddrï¿½ï¿½"+localAddr);
         out.write("<br/>");
-        out.write("localName£º"+localName);
+        out.write("localNameï¿½ï¿½"+localName);
 	}
 
 	/**
