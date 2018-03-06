@@ -29,12 +29,12 @@ public class RegisterServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		
 		RegisterFormBean formbean = WebUtils.request2Bean(request,RegisterFormBean.class);
-		//鏍￠獙鐢ㄦ埛娉ㄥ唽濉啓鐨勮〃鍗曟暟鎹�
+		
 		if (formbean.validate() == false) {//濡傛灉鏍￠獙澶辫触
-			//灏嗗皝瑁呬簡鐢ㄦ埛濉啓鐨勮〃鍗曟暟鎹殑formbean瀵硅薄鍙戦�佸洖register.jsp椤甸潰鐨刦orm琛ㄥ崟涓繘琛屾樉绀�
+			
 			request.setAttribute("formbean", formbean);
-			//鏍￠獙澶辫触灏辫鏄庢槸鐢ㄦ埛濉啓鐨勮〃鍗曟暟鎹湁闂锛岄偅涔堝氨璺宠浆鍥瀝egister.jsp
-			request.getRequestDispatcher("/WEB-INF/pages/register.jsp").forward(request, response);
+			
+			request.getRequestDispatcher("/pages/register.jsp").forward(request, response);
 			return;
 		}
 
@@ -60,7 +60,7 @@ public class RegisterServlet extends HttpServlet {
 		} catch (Exception e) {
 			e.printStackTrace(); // 鍦ㄥ悗鍙拌褰曞紓甯�
 			request.setAttribute("message", "瀵逛笉璧凤紝娉ㄥ唽澶辫触锛侊紒");
-			request.getRequestDispatcher("/message.jsp").forward(request,response);
+			request.getRequestDispatcher("/pages/message.jsp").forward(request,response);
 		}
 		
 		

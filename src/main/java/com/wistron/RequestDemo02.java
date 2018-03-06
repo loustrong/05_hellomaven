@@ -17,23 +17,23 @@ public class RequestDemo02 extends HttpServlet {
     
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		 response.setCharacterEncoding("UTF-8");//设置将字符以"UTF-8"编码输出到客户端浏览器
-	        //通过设置响应头控制浏览器以UTF-8的编码显示数据
+		 response.setCharacterEncoding("UTF-8");
+	        
 	        response.setHeader("content-type", "text/html;charset=UTF-8");
 	        PrintWriter out = response.getWriter();
-	        Enumeration<String> reqHeadInfos = request.getHeaderNames();//获取所有的请求头
-	        out.write("获取到的客户端所有的请求头信息如下：");
+	        Enumeration<String> reqHeadInfos = request.getHeaderNames();//
+	        out.write("锟斤拷取锟斤拷锟侥客伙拷锟斤拷锟斤拷锟叫碉拷锟斤拷锟斤拷头锟斤拷息锟斤拷锟铰ｏ拷");
 	        out.write("<hr/>");
 	        while (reqHeadInfos.hasMoreElements()) {
 	            String headName = (String) reqHeadInfos.nextElement();
-	            String headValue = request.getHeader(headName);//根据请求头的名字获取对应的请求头的值
+	            String headValue = request.getHeader(headName);
 	            out.write(headName+":"+headValue);
 	            out.write("<br/>");
 	        }
 	        out.write("<br/>");
-	        out.write("获取到的客户端Accept-Encoding请求头的值：");
+	        out.write("锟斤拷取锟斤拷锟侥客伙拷锟斤拷Accept-Encoding锟斤拷锟斤拷头锟斤拷值锟斤拷");
 	        out.write("<hr/>");
-	        String value = request.getHeader("Accept-Encoding");//获取Accept-Encoding请求头对应的值
+	        String value = request.getHeader("Accept-Encoding");//值
 	        out.write(value);
 	        
 	        Enumeration<String> e = request.getHeaders("Accept-Encoding");

@@ -14,7 +14,7 @@
   </head>
   
   <body>
-	<h1>孤傲苍狼的网站</h1>
+	<h1>Test的网站</h1>
 	<hr/>
 	<c:if test="${user==null}">
 		<a href="${pageContext.request.contextPath}/servlet/RegisterUIServlet" target="_blank">注册</a>

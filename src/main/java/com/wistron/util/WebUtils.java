@@ -31,7 +31,7 @@ public class WebUtils {
 	}
 	
 	/**
-	 * 鐢熸垚UUID
+	 * UUID
 	 * @return
 	 */
 	public static String makeId(){

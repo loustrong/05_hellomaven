@@ -18,17 +18,9 @@
   
  
  <!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
-<dependency>
-    <groupId>org.springframework</groupId>
-    <artifactId>spring-context</artifactId>
-    <version>5.0.4.RELEASE</version>
-</dependency>
+
  <!-- https://mvnrepository.com/artifact/org.springframework/spring-aop -->
-<dependency>
-    <groupId>org.springframework</groupId>
-    <artifactId>spring-aop</artifactId>
-    <version>5.0.4.RELEASE</version>
-</dependency>
+
  <!-- https://mvnrepository.com/artifact/aopalliance/aopalliance -->
 <dependency>
     <groupId>aopalliance</groupId>
@@ -36,29 +28,18 @@
     <version>1.0</version>
 </dependency>
  <!-- https://mvnrepository.com/artifact/org.springframework/spring-beans -->
-<dependency>
-    <groupId>org.springframework</groupId>
-    <artifactId>spring-beans</artifactId>
-    <version>5.0.4.RELEASE</version>
-</dependency>
+
  <!-- https://mvnrepository.com/artifact/org.springframework/spring-core -->
-<dependency>
-    <groupId>org.springframework</groupId>
-    <artifactId>spring-core</artifactId>
-    <version>5.0.4.RELEASE</version>
-</dependency>
+
  <!-- https://mvnrepository.com/artifact/commons-logging/commons-logging -->
 <dependency>
     <groupId>commons-logging</groupId>
     <artifactId>commons-logging</artifactId>
-    <version>1.0.1</version>
+    <version>1.1.1</version>
 </dependency>
+
  <!-- https://mvnrepository.com/artifact/org.springframework/spring-expression -->
-<dependency>
-    <groupId>org.springframework</groupId>
-    <artifactId>spring-expression</artifactId>
-    <version>5.0.4.RELEASE</version>
-</dependency>
+
  <!-- https://mvnrepository.com/artifact/javax/javaee-api -->
 <dependency>
     <groupId>javax</groupId>
@@ -122,8 +103,8 @@
       <artifactId>maven-compiler-plugin</artifactId>  
       <version>3.6.2</version>  
       <configuration>   
-        <source>1.8</source>  
-        <target>1.8</target>
+        <source>1.7</source>  
+        <target>1.7</target>
         <encoding>UTF-8</encoding>  
       </configuration>  
     </plugin>  
@@ -144,11 +125,11 @@
     </plugin> 
      <plugin>  
         <groupId>org.apache.tomcat.maven</groupId>
-        <artifactId>tomcat8-maven-plugin</artifactId>
+        <artifactId>tomcat7-maven-plugin</artifactId>
         <version>3.0-r1756463</version>
                   <configuration> 
          
-          <server>tomcat8</server> 
+          <server>tomcat7</server> 
         </configuration>  
         </plugin>  
    
