@@ -48,6 +48,7 @@ public class RegisterServlet extends HttpServlet {
 			//
 			
 			service.registerUser(user);
+			
 			String message = String.format(
 					"注册成功！！3秒后为您自动跳到登录页面！！<meta http-equiv='refresh' content='3;url=%s'/>", 
 					request.getContextPath()+"/servlet/LoginUIServlet");

@@ -173,9 +173,6 @@
     <servlet-name>FormServlet</servlet-name>
     <url-pattern>/FormServlet</url-pattern>
   </servlet-mapping>
-  
-  
-  
   <servlet>
     <servlet-name>LoginUIServlet</servlet-name>
     <servlet-class>com.wistron.web.UI.LoginUIServlet</servlet-class>
@@ -228,21 +225,31 @@
     <filter-name>EncodingFilter</filter-name>
     <url-pattern>/*</url-pattern>
   </filter-mapping>
+  <servlet>
+    <servlet-name>UploadHandleServlet</servlet-name>
+    <servlet-class>com.wistron.web.controller.UploadHandleServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UploadHandleServlet</servlet-name>
+    <url-pattern>/servlet/UploadHandleServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>ListFileServlet</servlet-name>
+    <servlet-class>com.wistron.web.controller.ListFileServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ListFileServlet</servlet-name>
+    <url-pattern>/servlet/ListFileServlet</url-pattern>
+  </servlet-mapping>
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+  <servlet>
+      <servlet-name>DownLoadServlet</servlet-name>
+      <servlet-class>com.wistron.web.controller.DownLoadServlet</servlet-class>
+</servlet>
+ 
+<servlet-mapping>
+      <servlet-name>DownLoadServlet</servlet-name>
+      <url-pattern>/servlet/DownLoadServlet</url-pattern>
+</servlet-mapping>
   
 </web-app>
