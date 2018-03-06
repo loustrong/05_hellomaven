@@ -36,7 +36,9 @@
 				<tr>
 					<td>生日</td>
 					<td>
-						<input type="text" name="birthday" value="${formbean.birthday}">${formbean.errors.birthday}
+					
+					
+					 	<input type="text" name="birthday" value="${formbean.birthday}">${formbean.errors.birthday}
 					</td>
 				</tr>
 				<tr>

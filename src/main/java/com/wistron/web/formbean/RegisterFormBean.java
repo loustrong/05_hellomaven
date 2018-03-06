@@ -84,11 +84,12 @@ public class RegisterFormBean {
 			
 			if (this.birthday != null && !this.birthday.trim().equals("")) {
 				try {
+					
 					DateLocaleConverter conver = new DateLocaleConverter();
 					conver.convert(this.birthday);
 				} catch (Exception e) {
 					isOk = false;
-					errors.put("birthday", "the format is wrong");
+					errors.put("birthday", birthday+"the format is wrong");
 				}
 			}
 

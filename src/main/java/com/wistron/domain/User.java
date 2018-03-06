@@ -5,21 +5,21 @@ import java.util.Date;
 
 /**
  * @author gacl
- * 鐢ㄦ埛瀹炰綋绫�
+ *
  */
 public class User implements Serializable {
 
 	private static final long serialVersionUID = -4313782718477229465L;
 	
-	// 鐢ㄦ埛ID
+	// ID
 	private String id;
-	// 鐢ㄦ埛鍚�
+	// 
 	private String userName;
-	// 鐢ㄦ埛瀵嗙爜
+	// 
 	private String userPwd;
-	// 鐢ㄦ埛閭
+	// 
 	private String email;
-	// 鐢ㄦ埛鐢熸棩
+	// 
 	private Date birthday;
 
 	public String getId() {

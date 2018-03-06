@@ -30,7 +30,7 @@ public class RegisterServlet extends HttpServlet {
 		
 		RegisterFormBean formbean = WebUtils.request2Bean(request,RegisterFormBean.class);
 		
-		if (formbean.validate() == false) {//濡傛灉鏍￠獙澶辫触
+		if (formbean.validate() == false) {//
 			
 			request.setAttribute("formbean", formbean);
 			
@@ -40,26 +40,27 @@ public class RegisterServlet extends HttpServlet {
 
 		User user = new User();
 		try {
-			// 娉ㄥ唽瀛楃涓插埌鏃ユ湡鐨勮浆鎹㈠櫒
+			// 
 			ConvertUtils.register(new DateLocaleConverter(), Date.class);
-			BeanUtils.copyProperties(user, formbean);//鎶婅〃鍗曠殑鏁版嵁濉厖鍒癹avabean涓�
-			user.setId(WebUtils.makeId());//璁剧疆鐢ㄦ埛鐨処d灞炴��
+			BeanUtils.copyProperties(user, formbean);//
+			user.setId(WebUtils.makeId());//
 			IUserService service = new UserServiceImpl();
-			//璋冪敤service灞傛彁渚涚殑娉ㄥ唽鐢ㄦ埛鏈嶅姟瀹炵幇鐢ㄦ埛娉ㄥ唽
+			//
+			
 			service.registerUser(user);
 			String message = String.format(
-					"娉ㄥ唽鎴愬姛锛侊紒3绉掑悗涓烘偍鑷姩璺冲埌鐧诲綍椤甸潰锛侊紒<meta http-equiv='refresh' content='3;url=%s'/>", 
+					"注册成功！！3秒后为您自动跳到登录页面！！<meta http-equiv='refresh' content='3;url=%s'/>", 
 					request.getContextPath()+"/servlet/LoginUIServlet");
 			request.setAttribute("message",message);
-			request.getRequestDispatcher("/message.jsp").forward(request,response);
+			request.getRequestDispatcher("/pages/message.jsp").forward(request,response);
 
 		} catch (UserExistException e) {
-			formbean.getErrors().put("userName", "娉ㄥ唽鐢ㄦ埛宸插瓨鍦紒锛�");
+			formbean.getErrors().put("userName", "注册用户已存在！！");
 			request.setAttribute("formbean", formbean);
-			request.getRequestDispatcher("/WEB-INF/pages/register.jsp").forward(request, response);
+			request.getRequestDispatcher("/pages/register.jsp").forward(request, response);
 		} catch (Exception e) {
-			e.printStackTrace(); // 鍦ㄥ悗鍙拌褰曞紓甯�
-			request.setAttribute("message", "瀵逛笉璧凤紝娉ㄥ唽澶辫触锛侊紒");
+			e.printStackTrace(); // 
+			request.setAttribute("message", "对不起，注册失败！！"+user.getUserName()+"  "+user.getUserPwd()+"  "+user.getId()+"  "+user.getEmail()+"  "+user.getBirthday());
 			request.getRequestDispatcher("/pages/message.jsp").forward(request,response);
 		}
 		

@@ -10,6 +10,7 @@ import org.dom4j.DocumentException;
 import org.dom4j.io.OutputFormat;
 import org.dom4j.io.SAXReader;
 import org.dom4j.io.XMLWriter;
+import org.junit.Test;
 
 
 
@@ -20,8 +21,9 @@ private static String filename = "DB.xml";
 	public static Document getDocument() throws DocumentException{
 		
 		URL url = XmlUtils.class.getClassLoader().getResource(filename);
-		String realpath = url.getPath();
 		
+		String realpath = url.getPath();
+		System.out.println(realpath);
 		SAXReader reader = new SAXReader();
 		return reader.read(new File(realpath));
 		

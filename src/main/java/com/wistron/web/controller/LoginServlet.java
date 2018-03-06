@@ -20,28 +20,28 @@ public class LoginServlet extends HttpServlet {
     
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String username = request.getParameter("username");
-		//鑾峰彇鐢ㄦ埛濉啓鐨勭櫥褰曞瘑鐮�
+		//
 		String password = request.getParameter("password");
 		
 		IUserService service = new UserServiceImpl();
-		//鐢ㄦ埛鐧诲綍
+		//
 		User user = service.loginUser(username, password);
 		if(user==null){
 			String message = String.format(
-					"瀵逛笉璧凤紝鐢ㄦ埛鍚嶆垨瀵嗙爜鏈夎锛侊紒璇烽噸鏂扮櫥褰曪紒2绉掑悗涓烘偍鑷姩璺冲埌鐧诲綍椤甸潰锛侊紒<meta http-equiv='refresh' content='2;url=%s'", 
+					"对不起，用户名或密码有误！！请重新登录！2秒后为您自动跳到登录页面！！<meta http-equiv='refresh' content='2;url=%s'", 
 					request.getContextPath()+"/servlet/LoginUIServlet");
 			request.setAttribute("message",message);
-			request.getRequestDispatcher("/message.jsp").forward(request, response);
+			request.getRequestDispatcher("/pages/message.jsp").forward(request, response);
 			return;
 		}
 		//鐧诲綍鎴愬姛鍚庯紝灏卞皢鐢ㄦ埛瀛樺偍鍒皊ession涓�
 		request.getSession().setAttribute("user", user);
 		String message = String.format(
-				"鎭枩锛�%s,鐧婚檰鎴愬姛锛佹湰椤靛皢鍦�3绉掑悗璺冲埌棣栭〉锛侊紒<meta http-equiv='refresh' content='3;url=%s'", 
+				"恭喜：%s,登陆成功！本页将在3秒后跳到首页！！<meta http-equiv='refresh' content='3;url=%s'",  
 				user.getUserName(),
-				request.getContextPath()+"/index.jsp");
+				request.getContextPath()+"/pages/index.jsp");
 		request.setAttribute("message",message);
-		request.getRequestDispatcher("/message.jsp").forward(request, response);
+		request.getRequestDispatcher("/pages/message.jsp").forward(request, response);
 		
 		
 	}
