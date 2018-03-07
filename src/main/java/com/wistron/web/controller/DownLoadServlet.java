@@ -21,13 +21,20 @@ public class DownLoadServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		//得到要下载的文件名
         String fileName = request.getParameter("filename");  //23239283-92489-阿凡达.avi
-        fileName = new String(fileName.getBytes("iso8859-1"),"UTF-8");
+        
+        fileName = new String(fileName.getBytes("ISO-8859-1"),"UTF-8");
+        fileName=java.net.URLDecoder.decode(fileName, "UTF-8");
+        System.out.println(fileName);
         //上传的文件都是保存在/WEB-INF/upload目录下的子目录当中
         String fileSaveRootPath=this.getServletContext().getRealPath("/WEB-INF/upload");
+        System.out.println("fileSaveRootPath"+fileSaveRootPath);
         //通过文件名找出文件的所在目录
         String path = findFileSavePathByFileName(fileName,fileSaveRootPath);
+        System.out.println("path"+path);
+        System.out.println("aB-path"+path + "\\" + fileName);
         //得到要下载的文件
-        File file = new File(path + "\\" + fileName);
+       File file = new File(path + "\\" + fileName);
+       // File file = new File(fileSaveRootPath + "\\" + fileName);
         //如果文件不存在
         if(!file.exists()){
             request.setAttribute("message", "您要下载的资源已被删除！！");

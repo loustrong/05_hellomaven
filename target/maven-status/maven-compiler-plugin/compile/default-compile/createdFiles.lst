@@ -15,6 +15,7 @@ com\wistron\IndexServlet.class
 com\wistron\HelloIndex.class
 com\wistron\DoFormServlet.class
 com\wistron\RequestDemo02.class
+com\wistron\web\tag\ViewIPTag.class
 com\wistron\util\XmlUtils.class
 com\wistron\ServletContextDemo2.class
 com\wistron\web\formbean\RegisterFormBean.class
