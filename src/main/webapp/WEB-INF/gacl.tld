@@ -39,4 +39,11 @@
         </attribute>
     </tag>
     
+    <tag>
+        <name>demo2</name>
+        <tag-class>com.wistron.web.tag.TagDemo1</tag-class>
+         <!--demo2标签没有标签体，所以这里的body-content设置为empty-->
+         <body-content>empty</body-content>
+         </tag>
+    
 </taglib>
